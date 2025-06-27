@@ -1,0 +1,9 @@
+<section>
+  <h1>Products</h1>
+  {{#each products}}
+  <article class="product">
+    <h2><a href="/products/{{_id}}">{{productName}}</a></h2>
+    <p>{{body}}</p>
+  </article>
+  {{/each}}
+</section>

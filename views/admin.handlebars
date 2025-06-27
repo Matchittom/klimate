@@ -1,0 +1,22 @@
+{{!--
+
+If the user is logged in and they are an admin user, and 'GET /admin' endpoint is called, you will render this view
+based on the specs.
+
+
+
+--}}
+
+
+<h2>
+    Welcome {{user.firstName}} {{user.lastName}}
+</h2>
+
+<p>
+    The time is now: {{currentTime}}. <br>
+    You get super secret admin access since you are an admin. Remember, with great power comes great responsibility!!
+</p>
+
+<a id="aIDa" href="/protected">Go to Protected Route</a>
+<br>
+<a id="aIDb" href="/logout">Logout</a>

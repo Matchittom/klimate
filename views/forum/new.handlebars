@@ -1,0 +1,31 @@
+<article class="new-post">
+  <h1>Post to Forum</h1>
+  <form action="/forum" method="POST" class="new-post-form">
+   
+    <label for="post-body">
+      Text
+    </label>
+    <textarea id="post-body" name="text" rows="4" placeholder="Post Content"
+      class="full-width-input">{{post.text}}</textarea>
+
+    <label for="userId">
+      User ID
+    </label>
+    
+   
+    <br>
+    <button type="submit">Create New Post</button>
+    <button type="reset">Clear Form</button>
+    {{!-- <input type="hidden" name='_method' value="PUT" /> --}}
+  </form>
+  {{#if hasErrors}}
+  <ul class="error-list">
+    {{#each errors}}
+    <li>
+      {{this}}
+    </li>
+    {{/each}}
+  </ul>
+  {{/if}}
+
+</article>

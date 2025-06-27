@@ -1,0 +1,15 @@
+<nav>
+            <ul>
+                <li><a href="/forum/new">Add a Post</a></li>
+            </ul>
+        </nav>
+
+<section>
+  <h1 id="pId">Forum</h1>
+  {{#each forum}}
+  <article class="forum">
+    <h2><a href="/forum/{{_id}}">{{userId}}</a></h2>
+    <p>{{text}}</p>
+  </article>
+  {{/each}}
+</section>

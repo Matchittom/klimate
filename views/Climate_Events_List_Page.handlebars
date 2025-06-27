@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Events</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; background-color: #f4f4f4; }
+        .container { max-width: 1200px; margin: auto; padding: 20px; }
+        header, footer { background: #333; color: #fff; padding: 10px 0; text-align: center; }
+        h1, h2 { color: #008000; }
+        p { margin: 20px 0; }
+        .button { display: inline-block; padding: 10px 20px; margin: 10px 0; background: #008000; color: white; text-decoration: none; border-radius: 5px; }
+        input[type="search"] { padding: 10px; width: 50%; margin-top: 20px; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin: 10px 0; padding: 10px; background: white; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Climate Events Directory</h1>
+        </div>
+    </header>
+    <div class="container">
+        <input type="search" placeholder="Search events...">
+        <ul>
+            {{#each events}}
+            <li>
+                <h2>{{this.name}}</h2>
+                <p>{{this.description}}</p>
+                <p>Date: {{this.date}}</p>
+                <a href="/event/{{this.id}}" class="button">View Details</a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <footer>
+        <div class="container">
+            <p>Contact Us: info@klimate.com | Follow us on social media</p>
+        </div>
+    </footer>
+</body>
+</html>

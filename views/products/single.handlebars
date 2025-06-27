@@ -1,0 +1,27 @@
+<article class="product">
+  <h1>{{ product.productName }}</h1>
+
+  <p> Description: {{ product.description }}</p>
+
+  <p> Reviews: </p>
+  <ul>
+  {{#each product.reviews}}
+  <li>
+    Title: {{this.title}}<br>
+    Reviewer Name: {{this.reviewerName}}<br>
+    Review: {{this.review}}<br>
+    Rating: {{this.rating}}<br>
+    Review Date: {{this.reviewDate}}<br>
+    <br>
+  </li>
+  {{/each}}
+  </ul>
+
+  <p> Average Rating: {{ product.averageRating }}</p>
+
+
+
+ 
+  
+  <a href="/products">Back to Sustainable Product Page</a>
+</article>

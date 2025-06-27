@@ -1,0 +1,9 @@
+<section>
+  <h1>Projects</h1>
+  {{#each projects}}
+  <article class="project">
+    <h2><a href="/projects/{{_id}}">{{projectName}}</a></h2>
+    <p>{{body}}</p>
+  </article>
+  {{/each}}
+</section>
