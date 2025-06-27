@@ -17,6 +17,7 @@ Step One: Our dependencies are:
 "jsdom": "^24.0.0",
 "mongodb": "^6.5.0",
 "nodemon": "^3.1.0"
+
 Step Two: npm run seed npm start
 
 Step Three: in the browser type http://localhost:3000/
